@@ -112,20 +112,14 @@ public class Menu {
                 Long numeroCelular = registro.getLong("numeroCelular");
                 Long numeroFijo = registro.getLong("numeroFijo");
                 String programaAcademico = registro.getString("programaAcademico");
-                System.out.println("Nombres:: " + nombres + ", Apellidos: "+ apellidos + ", Fecha nacimiento: " + fechaNacimiento 
-                        +", Correo institucional: " + correoInstitucional + ", Correo personal: "+ correoPersonal 
-                        +", Número de teléfono celular: "+ numeroCelular + ", Número de teléfono fijo: " + numeroFijo + ", Programa académico: "+ programaAcademico);
+                System.out.println("Nombres: " + nombres + "\n"+"Apellidos: "+ apellidos + "\n"+"Fecha nacimiento: " + fechaNacimiento 
+                        + "\n"+"Correo institucional: " + correoInstitucional + "\n"+"Correo personal: "+ correoPersonal 
+                        + "\n"+"Número de teléfono celular: "+ numeroCelular + "\n"+"Número de teléfono fijo: " + numeroFijo + "\n"+"Programa académico: "+ programaAcademico+ "\n");
             }
 
         } catch(SQLException ex){
             System.out.println(ex.toString());
         }
-        try { 
-            Thread.sleep(5000); 
-        } catch (InterruptedException e) { 
-
-        }
-
     }
 
     public void consultarEstudiante()
@@ -150,19 +144,14 @@ public class Menu {
                 Long numeroCelular = registro.getLong("numeroCelular");
                 Long numeroFijo = registro.getLong("numeroFijo");
                 String programaAcademico = registro.getString("programaAcademico");
-                System.out.println("Nombres:: " + nombres + ", Apellidos: "+ apellidos + ", Fecha nacimiento: " + fechaNacimiento 
-                        +", Correo institucional: " + correoInstitucional + ", Correo personal: "+ correoPersonal 
-                        +", Número de teléfono celular: "+ numeroCelular 
-                        +", Número de teléfono fijo: " + numeroFijo + ", Programa académico: "+ programaAcademico);
+                System.out.println("Nombres: " + nombres + "\n"+"Apellidos: "+ apellidos + "\n"+"Fecha nacimiento: " + fechaNacimiento 
+                        + "\n"+"Correo institucional: " + correoInstitucional + "\n"+"Correo personal: "+ correoPersonal 
+                        + "\n"+"Número de teléfono celular: "+ numeroCelular + "\n"+"Número de teléfono fijo: " + numeroFijo + "\n"
+                        +"Programa académico: "+ programaAcademico+ "\n");
             }
 
         } catch(SQLException ex){
             System.out.println(ex.toString());
-        }
-        try { 
-            Thread.sleep(5000); 
-        } catch (InterruptedException e) { 
-
         }
 
     }
