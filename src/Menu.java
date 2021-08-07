@@ -138,7 +138,7 @@ public class Menu {
         try {
 
             Statement comando=con.getConnection().createStatement();
-            String consulta = "select \"(nombres,apellidos,fechaNacimiento, correoInstitucional, correoPersonal, numeroCelular, numeroFijo,programaAcademico from estudiantes where correoInstitucional='"+estudiante.getCorreoInstitucional()+"'";
+            String consulta = "SELECT `nombres`, `apellidos`, `fechaNacimiento`, `correoInstitucional`, `correoPersonal`, `numeroCelular`, `numeroFijo`, `programaAcademico` FROM `estudiantes` WHERE correoInstitucional = '"+estudiante.getCorreoInstitucional()+"'";
             ResultSet registro=comando.executeQuery(consulta);
             while (registro.next()) {
                 
