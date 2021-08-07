@@ -102,7 +102,7 @@ public class Menu {
         try {
 
             Statement comando=con.getConnection().createStatement();
-            ResultSet registro = comando.executeQuery("SELECT * FROM estudiantes");
+            ResultSet registro = comando.executeQuery("SELECT * FROM `estudiantes`");
             while (registro.next()) {
                 String nombres = registro.getString("nombres");
                 String apellidos = registro.getString("apellidos");
@@ -176,7 +176,7 @@ public class Menu {
         try {
 
             Statement comando=con.getConnection().createStatement();
-            int cantidad = comando.executeUpdate("delete from estudiantes where correoInstitucional='"+estudiante.getCorreoInstitucional()+"'");
+            int cantidad = comando.executeUpdate("DELETE FROM `estudiantes` WHERE correoInstitucional='"+estudiante.getCorreoInstitucional()+"'");
             if (cantidad==1) {
 
                 System.out.println("Se eliminó el estudiante");
@@ -202,10 +202,9 @@ public class Menu {
         try {
 
             Statement comando=con.getConnection().createStatement();
-            int cantidad = comando.executeUpdate("update estudiantes set correoInstitucional='"+estudiante.getCorreoInstitucional() + "',"+
-                    "correoPersonal=" +estudiante.getCorreoPersonal()+ "'," + "numeroCelular=" + estudiante.getNumeroCelular()+
-                    "',"+ "numeroFijo=" + estudiante.getNumeroFijo() + "',"+ "programaAcademico=" + estudiante.getProgramaAcademico() +
-                    " where correoInstitucional='"+estudiante.getCorreoInstitucional()+"'");
+            int cantidad = comando.executeUpdate("UPDATE `estudiantes` SET `correoInstitucional`='"+estudiante.getCorreoInstitucional()+
+                    "',`correoPersonal`='"+estudiante.getCorreoPersonal()+"',`numeroCelular`="+estudiante.getNumeroCelular()+",`numeroFijo`="+estudiante.getNumeroFijo()+
+                    ",`programaAcademico`='"+estudiante.getProgramaAcademico()+"' WHERE correoInstitucional = '"+estudiante.getCorreoInstitucional()+"'");
             if (cantidad==1) {
                 System.out.println("Se modificó el estudiante");
             } else {
