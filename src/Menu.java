@@ -86,7 +86,7 @@ public class Menu {
             comando.executeUpdate("insert into estudiantes"
                     + "(nombres,apellidos,fechaNacimiento, correoInstitucional, correoPersonal, numeroCelular, numeroFijo,programaAcademico) values "
                     + "('"+estudiante.getNombres()+"','"+estudiante.getApellidos()+"','"+estudiante.getFechaDeNacimiento()+"','"+estudiante.getCorreoInstitucional()+"','"
-                    +"','"+estudiante.getCorreoPersonal()+"','"+"','"+estudiante.getNumeroCelular()+"','"+"','"+estudiante.getNumeroFijo()+"','"+"','"+estudiante.getProgramaAcademico()+"')");
+                    +"','"+estudiante.getCorreoPersonal()+"',"+estudiante.getNumeroCelular()+","+estudiante.getNumeroFijo()+",'"+estudiante.getProgramaAcademico()+"')");
             System.out.println("Se agregó el estudiante");
 
         } catch(SQLException ex){
