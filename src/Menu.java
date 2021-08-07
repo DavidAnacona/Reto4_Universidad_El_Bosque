@@ -83,10 +83,10 @@ public class Menu {
 
             Statement comando=con.getConnection().createStatement();
             System.out.println("Conectado!!"+con.getbd());
-            comando.executeUpdate("insert into estudiantes"
-                    + "(nombres,apellidos,fechaNacimiento, correoInstitucional, correoPersonal, numeroCelular, numeroFijo,programaAcademico) values "
-                    + "('"+estudiante.getNombres()+"','"+estudiante.getApellidos()+"','"+estudiante.getFechaDeNacimiento()+"','"+estudiante.getCorreoInstitucional()+"','"
-                    +"','"+estudiante.getCorreoPersonal()+"',"+estudiante.getNumeroCelular()+","+estudiante.getNumeroFijo()+",'"+estudiante.getProgramaAcademico()+"')");
+            comando.executeUpdate("INSERT INTO `estudiantes`(`nombres`, `apellidos`, `fechaNacimiento`, `correoInstitucional`, `correoPersonal`, `numeroCelular`, `numeroFijo`, `programaAcademico`) VALUES ('"+
+                    estudiante.getNombres()+"','"+estudiante.getApellidos()+"','"+estudiante.getFechaDeNacimiento()+"','"+estudiante.getCorreoInstitucional()+"','"
+                    +estudiante.getCorreoPersonal()+"',"+estudiante.getNumeroCelular()+","+estudiante.getNumeroFijo()+",'"+estudiante.getProgramaAcademico()+"')");
+
             System.out.println("Se agregó el estudiante");
 
         } catch(SQLException ex){
